@@ -1,0 +1,196 @@
+/* /* body { 
+    font-family: 'Bitter', sans-serif; */
+    /* background: #f4f4f4; 
+    color: #333;
+} */
+/* .container { 
+    max-width: 1080px; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); 
+    margin-top: 50px;
+    margin-bottom: 70px;
+} */
+
+/*  --------- BACKGROUND VIDEO ----------------- */
+
+
+
+
+    /* First Section (Video Hero) */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* #background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    } */
+
+    #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+
+
+/* #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+} */
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    /* Added styles for the semi-transparent box */
+    padding: 20px; /* Add padding for spacing */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 10px; /* Optional: Rounded corners */
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+    /* .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero-text h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .hero-text p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    } */
+
+
+
+
+
+
+
+
+
+
+
+    /* -------------- Carousel Cards ---------------- */
+
+
+
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .carousel-inner {
+      padding: 30px 0;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #333;
+      border-radius: 50%;
+    }
+
+    .scrolling-wrapper {
+      scrollbar-width: thin;
+      scrollbar-color: #888 transparent;
+    }
+
+    .scrolling-wrapper::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scrolling-wrapper::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+    }
+
+    .scrolling-wrapper::-webkit-scrollbar-track {
+      background: transparent;
+    } */
+
+
+
+    /* -------------- Carousel Cards (Images Only) ----------------*/
+
+/* .image-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.scrolling-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+  } */
+
+
+
+
+
+/* ----------- FOOTER ------------*/
+      
+    footer {
+    background: #111;
+    }
+    
+    footer a {
+    transition: 0.3s;
+    }
+    
+    footer a:hover {
+    color: #f8c630;
+    }

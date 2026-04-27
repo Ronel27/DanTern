@@ -1,0 +1,774 @@
+/* --- General Style Adjustments --- */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sitename {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: relative;
+  border-bottom: 3px solid #e03a3c; /* Accent color */
+  display: inline-block;
+}
+
+.section-title p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Light background helper class */
+.light-background {
+  background-color: #f8f9fa; /* Light gray background */
+  padding-top: 60px; /* Add padding matching section padding */
+  padding-bottom: 60px;
+}
+
+/* --- Header Adjustments --- */
+.header {
+  background: rgba(255, 255, 255); /* White background with 50% transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  transition: all 0.5s;
+  color: #000000; /* Ensure text color is black */
+}
+.header .logo img {
+  max-height: 50px; /* Adjusted logo size */
+  width: auto;
+  margin-right: 10px;
+}
+.header .logo h1.sitename {
+  font-size: 1.4rem; /* Adjusted site name size */
+  font-weight: 700;
+  color: #000000; /* Change site name color to black */
+  line-height: 1.2;
+  margin: 0; /* Remove default margin */
+}
+
+/* Style for the Login Button in the Header */
+.header .btn-login {
+  background-color: #bf0609 ; /* Blue background */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  padding: 8px 20px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 0.95rem; /* Adjust font size */
+  font-weight: 500; /* Slightly bold text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.header .btn-login:hover {
+  color: #fff; /* Ensure text remains white */
+}
+
+.header .btn-logout {
+  background-color: #bf0609 ; /* Blue background */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  padding: 8px 20px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 0.95rem; /* Adjust font size */
+  font-weight: 500; /* Slightly bold text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.header .btn-logout:hover {
+  color: #fff; /* Ensure text remains white */
+}
+
+/* --- Bootstrap Navbar Styling --- */
+.navbar {
+  padding: 0; /* Remove default navbar padding */
+}
+
+.navbar-nav .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #000000; /* Change navigation link color to black */
+  padding: 10px 15px; /* Adjust padding */
+  transition: color 0.3s;
+  font-size: 0.95rem;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: red; /* Pure white for hover/active state */
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.5rem; /* Adjust icon size */
+  color: #f8f9fa; /* Light color for the toggler icon */
+}
+.navbar-toggler:hover {
+  color: #ffffff; /* Pure white for hover state */
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Styling the collapsed menu */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #fff; /* Solid background for collapsed menu */
+    margin-top: 10px; /* Space between toggler and menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+  .navbar-nav .nav-link {
+    padding: 10px 20px; /* More padding for vertical items */
+  }
+  .navbar-nav .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    background-color: #f8f9fa; /* Slightly different background for dropdown */
+  }
+  .navbar-nav .dropdown-item {
+    padding: 8px 30px; /* Indent dropdown items */
+    font-size: 0.9rem;
+  }
+  .navbar-nav .dropdown-item:hover {
+    color: #e03a3c;
+    background-color: transparent;
+  }
+}
+
+/* Adjust dropdown appearance on desktop */
+@media (min-width: 992px) {
+  .navbar .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    margin-top: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .navbar .dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar .dropdown .dropdown-item {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+  .navbar .dropdown .dropdown-item:hover {
+    color: #e03a3c;
+    background-color: #f8f9fa;
+  }
+}
+
+/* --- New Hero Section --- */
+
+#hero-static {
+  /* Adjust this value (e.g., 60px to 100px) based on your header's actual height */
+  padding-top: 80px !important; 
+  margin-top: 0 !important;
+}
+
+.hero-container {
+  /* Ensure the internal container doesn't have extra top margin */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#hero-static {
+  width: 100%;
+  height: 95vh;
+  position: relative;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/c/ce/Spoliarium.jpg")
+    center center no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin-top: 70px; /* Adjust based on FINAL header height */
+  
+}
+#hero-static:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+}
+.hero-container {
+  position: absolute;
+  inset: 0; /* Simplified positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+  width: 100%;
+}
+.hero-container h2 {
+  margin: 0 0 15px 0;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.hero-container p {
+  color: #eee;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.hero-container .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none; /* Ensure link styling is removed */
+}
+.hero-container .btn-get-started:hover {
+  background: #e03a3c;
+  border-color: #e03a3c;
+}
+
+/* --- Performances & Events Section --- */
+.events {
+  /* Added padding for section */
+  padding: 60px 0;
+}
+.event-item {
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  height: 100%; /* Ensure items in a row have same height */
+  display: flex;
+  flex-direction: column;
+}
+.event-item:hover {
+  transform: translateY(-5px);
+}
+.event-item img {
+  max-width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.event-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.event-item h3 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.event-item h3 a:hover {
+  color: #e03a3c;
+}
+.event-item .event-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+.event-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  flex-grow: 1; /* Allow paragraph to take remaining space */
+}
+
+/* --- News Section Adjustments --- */
+.news-section {
+  /* Ensure section padding */
+  padding: 60px 0;
+}
+.news-post {
+  padding: 0 15px; /* Spacing between slides */
+}
+.news-post-inner {
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 100%; /* Ensure equal height */
+  display: flex;
+  flex-direction: column;
+}
+.news-post-inner img {
+  border-radius: 8px 8px 0 0;
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.news-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+.news-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.news-content h3 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.news-content h3 a:hover {
+  color: #e03a3c;
+}
+.news-content .entry-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+.news-content p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+/* Slick Carousel Arrow Styling */
+.carousel-arrow {
+  position: absolute;
+  top: 40%; /* Adjust vertical position relative to images */
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex !important; /* Override Slick's display */
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.carousel-arrow:hover {
+  background: #e03a3c;
+}
+.left-arrow {
+  left: -20px;
+}
+.right-arrow {
+  right: -20px;
+}
+.carousel-arrow i {
+  font-size: 1.2rem;
+}
+
+/* Slick Dots */
+.slick-dots {
+  bottom: -30px; /* Position dots below the carousel */
+}
+.slick-dots li button:before {
+  font-size: 10px; /* Adjust dot size */
+  color: #aaa; /* Dot color */
+  opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+  color: #e03a3c; /* Active dot color */
+}
+
+/* --- About Section --- */
+.about {
+  padding: 60px 0; /* Ensure section padding */
+  /* display: block;
+       visibility: visible;
+       overflow: visible; */
+}
+
+#about .section-title h2 {
+  border-bottom: none;
+  margin-bottom: 15px; /* Adjust spacing below title if needed */
+  /* display: block; is default for h2, likely not needed */
+}
+
+.about .about-img img {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make image responsive */
+  height: auto;
+}
+
+.about .content h3 {
+  /* Renamed from .our-story */
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.about .content p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 1rem; /* Ensure consistent paragraph spacing */
+}
+
+.about .content p:last-of-type {
+  margin-bottom: 0; /* Remove margin from last paragraph */
+}
+
+@media (max-width: 991px) {
+  .about .about-img {
+    margin-top: 30px; /* Add space above image when stacked */
+  }
+}
+
+/* --- Programs (Services) Section --- */
+.services {
+  /* Ensure section padding */
+  padding: 60px 0;
+}
+.service-item {
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 100%; /* Ensure equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-item:hover {
+  transform: translateY(-5px);
+}
+.service-item .icon {
+  margin-bottom: 20px;
+}
+.service-item .icon i {
+  font-size: 3rem;
+  color: #e03a3c;
+}
+.service-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.service-item a {
+  text-decoration: none;
+  color: #333;
+}
+.service-item a:hover h3 {
+  color: #e03a3c;
+}
+.service-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* --- People (Team) Section --- */
+.team {
+  /* Ensure section padding */
+  padding: 60px 0;
+}
+.team .member {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  height: 100%; /* Ensure equal height for slides */
+}
+.team .member img {
+  width: 100%; /* Make image fill width */
+  height: 280px; /* Fixed height */
+  object-fit: cover;
+  object-position: center; /* Ensure face is centered */
+  margin: 0 auto 15px auto;
+  display: block;
+}
+.team .member-content {
+  padding: 0 15px;
+}
+.team .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 1.1rem;
+  color: #333;
+}
+.team .member span {
+  font-style: italic;
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+}
+/* Swiper Navigation/Pagination */
+.team-swiper {
+  padding-bottom: 40px; /* Space for pagination */
+}
+.team-swiper .swiper-pagination {
+  bottom: 0; /* Position pagination at the bottom */
+}
+.team-swiper .swiper-pagination-bullet-active {
+  background-color: #e03a3c;
+}
+.team-swiper .swiper-button-next,
+.team-swiper .swiper-button-prev {
+  color: #e03a3c;
+  top: calc(50% - 20px); /* Adjust vertical position slightly */
+}
+/* Hide Swiper arrows on smaller screens if needed */
+@media (max-width: 767px) {
+  .team-swiper .swiper-button-next,
+  .team-swiper .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* --- Contact Section --- */
+.contact {
+  /* Ensure section padding */
+  padding: 60px 0;
+}
+.contact .info-item {
+  background: #fff; /* Changed background */
+  padding: 25px; /* Increased padding */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07); /* Added subtle shadow */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  height: 100%; /* Ensure equal height */
+}
+.contact .info-item i {
+  font-size: 1.8rem; /* Slightly larger icon */
+  color: #e03a3c;
+  margin-right: 20px; /* More space */
+  flex-shrink: 0;
+  line-height: 1;
+  width: 40px; /* Give icon fixed width */
+  text-align: center;
+}
+.contact .info-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.contact .info-item p,
+.contact .info-item p a {
+  /* Style links within info */
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contact .info-item p a:hover {
+  color: #e03a3c;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #333;
+  color: #ccc;
+  padding: 50px 0; /* Increased padding */
+  font-size: 0.9rem;
+}
+.footer .footer-logo img {
+  max-height: 50px;
+  margin-bottom: 15px;
+}
+.footer h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px; /* More space */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555;
+}
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-links ul li {
+  padding: 8px 0;
+  display: flex; /* Use flex for alignment */
+  align-items: center;
+}
+.footer .footer-links ul li::before {
+  /* Add subtle bullet */
+  content: "\f105"; /* FontAwesome angle right */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e03a3c;
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+.footer .footer-links ul a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer .footer-links ul a:hover {
+  color: #e03a3c;
+}
+.footer .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1); /* Lighter background */
+  color: #fff;
+  margin: 0 5px 10px 0; /* Added bottom margin */
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+.footer .social-links a:hover {
+  background-color: #e03a3c;
+}
+.footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #555;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+.footer .copyright .sitename {
+  color: #fff;
+  font-weight: bold;
+}
+.footer address p {
+  /* Style address lines */
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+  #hero-static {
+    height: 70vh;
+    margin-top: 70px;
+  } /* Adjust margin based on header height */
+  .hero-container h2 {
+    font-size: 2.5rem;
+  }
+  .hero-container p {
+    font-size: 1rem;
+  }
+  .header .logo img {
+    max-height: 45px;
+  }
+  .header .logo h1.sitename {
+    font-size: 1.3rem;
+  }
+  .carousel-arrow {
+    display: none !important;
+  } /* Hide Slick arrows on smaller screens */
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero-static {
+    height: 60vh;
+    margin-top: 65px;
+  } /* Further adjust */
+  .hero-container h2 {
+    font-size: 2rem;
+  }
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  .about .about-img {
+    margin-bottom: 30px;
+  }
+  .footer .text-start,
+  .footer .text-end {
+    text-align: center !important;
+  }
+  .footer .footer-col {
+    margin-bottom: 30px;
+  }
+  .footer h4 {
+    margin-bottom: 15px;
+  }
+}
+
+/* --- Scroll Top Button --- */
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 9999;
+  background: #e03a3c;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.scroll-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+.scroll-top:hover {
+  background: #e65f61; /* Slightly lighter red */
+  color: #fff;
+}
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* --- Preloader --- */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.6s ease-out;
+  display: flex; /* Use flex to center */
+  align-items: center;
+  justify-content: center;
+}
+/* Optional: Add a spinner */
+#preloader:before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #e03a3c;
+  border-top-color: #f8f9fa;
+  animation: preloader-spin 1s linear infinite;
+}
+@keyframes preloader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
